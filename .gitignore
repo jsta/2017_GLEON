@@ -4,3 +4,7 @@
 *.snm
 *.synctex.gz
 *.toc
+.Rproj.user
+*.aux
+*.blg
+*.out
