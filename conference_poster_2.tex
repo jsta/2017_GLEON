@@ -15,9 +15,9 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%----------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
 
 \documentclass[final,hyperref={pdfpagelabels=false}]{beamer}
 
@@ -40,9 +40,9 @@
 
 \usecaptiontemplate{\small\structure{\insertcaptionname~\insertcaptionnumber: }\insertcaption} % A fix for figure numbering
 
-%----------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
 %	TITLE SECTION 
-%----------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
 
 \title{\huge The Effect of Lake Connectivity on Phosphorus Retention in Lakes} % Poster title
 
@@ -50,15 +50,15 @@
 
 \institute{Department of Fisheries and Wildlife, Michigan State University, MI, USA} % Institution(s)
 
-%----------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
 %	FOOTER TEXT
-%----------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
 
-\newcommand{\leftfoot}{} % Left footer text
+\newcommand{\leftfoot}{https://jsta.rbind.io} % Left footer text
 
 \newcommand{\rightfoot}{stachel2@msu.edu} % Right footer text
 
-%----------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
 
 \begin{document}
 
@@ -72,55 +72,84 @@
 
 \begin{column}{.465\textwidth} % The first column
 
-%----------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
 %	INTRODUCTION
-%----------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
             
 \begin{block}{Introduction}
 
 \begin{itemize}
 \item A comprehensive understanding of phosphorus (P) cycling is neccessary to predict P concentrations among many different lakes types and to better manage the risk of eutrophication from excess nutrient loading.
+\vspace{1em}
 \item P retention is a desirable metric for assessing eutrophication risk because it is a unitless measure that can be easily compared among different lake types irrespective of their baseline P concentrations or total P inputs.
-\item In the absence of direct measurement, P retention is typically modelled as a function of a given lake's volume-weighted hydrologic flux (or its inverse, \alert{residence time}).
+\vspace{1em}
+\item P retention is typically modelled as a function of a given lake's volume-weighted hydrologic flux (or its inverse, \alert{residence time}).
+\end{itemize}
+\vspace{2em}
+\begin{figure}
+\includegraphics[width=\linewidth]{milstead_single.pdf}
+\end{figure}
+
+\begin{itemize}
+\item Given evidence that P retention in streams is affected by network connectivity:
 \end{itemize}
 
 \end{block}
 
-%----------------------------------------------------------------------------------------
+
+%------------------------------------------------------------------------------
 %	Research Questions
-%----------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
 {
 \setbeamercolor{block title}{fg=black,bg=orange!70} % Change the block title color
 \setbeamercolor{block body}{bg=white}
 \begin{block}{Research Questions}
 
-\begin{figure}
-\includegraphics[width=\linewidth]{conny_framework.png}
-\end{figure}
-
 \begin{enumerate} \large 
-\item \textbf{In lakes with equal residence times, do more well-connected lakes retain less P than lower connectivity lakes?}
+\item \textbf{Do more well-connected lakes retain less P than lower connectivity lakes (given equal residence times)?}
 \item \textbf{Is the effect of connectivity on P retention more prominent in lakes with intermediate residence times?}
 \end{enumerate}
+
+\vspace{2em}
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{conny_framework.png}
+\end{figure}
 
 \end{block}
 }
 
-%----------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+
+\end{column} % End of the first column
+
+\begin{column}{.03\textwidth}\end{column} % Empty spacer column
+ 
+\begin{column}{.465\textwidth} % The second column
+
+%------------------------------------------------------------------------------
 %	METHODS
-%----------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
 \begin{block}{Methods}
 
-\begin{columns} % Subdivide the first main column
-\begin{column}{\textwidth} % The first subdivided column within the first main column
 \begin{itemize}
-\item Lakes were sampled on a monthly basis for a one year period in one of 197*, 197*, 197*, or 197*.
-\item P loads were estimated as the sum of the loads contributed by incoming tributaries.
-\item Retention time was computed on the basis of concurrent USGS gage measurements normalized to estimate a mean flow for each month in an average year.
-\item P retention was computed using a modification of the Vollenweider equations (see under flap, \cite{Brettreviewreassessmentlake2007}).
-\item All data from the National Eutrophication Survey (available from \cite{StachelekNationalEutrophicationSurvey2017}).
+\item Data on P loading, P export, and residence time from approximately 250 lakes included in the National Eutrophication Survey (1972 - 1975)\cite{StachelekNationalEutrophicationSurvey2017}.
+\vspace{1em}
+\item Calculated network properties of each lake catchment such as stream density, upstream lake area, average link length, and stream order ratio.
+\vspace{1em}
+\item Fit linear models relating P retention to lake catchment network properties as well as other potential explanatory factors such as landuse and climate.
+
+\begin{equation*}
+\begin{split}
+P\, Retention \sim Network\, Properties\, + \\ Landuse + Climate
+\end{split}
+\end{equation*}
+
+% \item Lakes were sampled on a monthly basis for a one year period in one of 1972, 1973, 1974, or 1975.
+% \item P loads were estimated as the sum of the loads contributed by incoming tributaries.
+% \item Retention time was computed on the basis of concurrent USGS gage measurements normalized to estimate a mean flow for each month in an average year.
+% \item P retention was computed using a modification of the Vollenweider equations (see under flap, \cite{Brettreviewreassessmentlake2007}).
 \end{itemize}
-\end{column}
 
 % \begin{column}{.43\textwidth} % The second subdivided column within the first main column
 % \centering
@@ -129,29 +158,15 @@
 % \caption{Figure caption}
 % \end{figure}
 % \end{column}
-\end{columns} % End of the subdivision
-
-\begin{itemize}
-\item Curabitur sapien ligula, faucibus in feugiat quis, vestibulum a turpis.
-\begin{itemize}
-\item Phasellus quis nunc neque.
-\end{itemize}
-\end{itemize}
 
 \end{block}
 
-%----------------------------------------------------------------------------------------
-
-\end{column} % End of the first column
-
-\begin{column}{.03\textwidth}\end{column} % Empty spacer column
- 
-\begin{column}{.465\textwidth} % The second column
-
-%----------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
 %	RESULTS
-%----------------------------------------------------------------------------------------
-
+%------------------------------------------------------------------------------
+{
+\setbeamercolor{block title}{fg=black,bg=orange!70} % Change the block title color
+\setbeamercolor{block body}{bg=white}
 \begin{block}{Results: Table}
 
 \begin{itemize}
@@ -159,45 +174,33 @@
 \end{itemize}
 
 \begin{table}
-\begin{tabular}{l l l}
+\begin{tabular}{l l}
 \toprule
-\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
+\textbf{Treatments} & \textbf{Response 1} \\
 \midrule
-Treatment 1 & 0.0003262 & 0.562 \\
-Treatment 2 & 0.0015681 & 0.910 \\
-Treatment 3 & 0.0009271 & 0.296 \\
+Response Variable: & P retention \\
+Predictor Variables: & P Loading Concentration \\
+ & Lake P Concentration \\
+ & Residence Time \\
+Grouping Variables: & Connectivity Index \\
+ & Climate Region \\
+ & Land-use Cover \\
 \bottomrule
 \end{tabular}
-\caption{Table caption}
+% \caption{Table caption}
 \end{table}
 
-\begin{itemize}
-\item Sollicitudin Vel Orci
-\item Maecenas Ultricies Feugiat Velit Non Mattis.
-\end{itemize}
-
-\begin{table}
-\begin{tabular}{l l l}
-\toprule
-\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
-\midrule
-Treatment 1 & 0.0003262 & 0.562 \\
-Treatment 2 & 0.0015681 & 0.910 \\
-Treatment 3 & 0.0009271 & 0.296 \\
-\bottomrule
-\end{tabular}
-\caption{Table caption}
-\end{table}
-     
 \end{block}
+}
 
 %------------------------------------------------
 
-%----------------------------------------------------------------------------------------
-%	CONCLUSION
-%----------------------------------------------------------------------------------------
 
-\begin{block}{Conclusion}
+%------------------------------------------------------------------------------
+%	FUTURE WORK
+%------------------------------------------------------------------------------
+
+\begin{block}{Future Work}
 
 \begin{itemize}
 \item Opet \alert{volutpat} ligula. Duis semper lorem eget dui dignissim porttitor. Nulla facilisi. In ullamcorper lorem quis dolor iaculis nec egestas enim ultricies. Cras ut mauris elit, ut lacinia dui. Proin in ante et libero hendrerit iaculis.
@@ -205,9 +208,9 @@ Treatment 3 & 0.0009271 & 0.296 \\
 
 \end{block}
 
-%----------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
 %	REFERENCES
-%----------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
 
 \begin{block}{References}
         
@@ -217,22 +220,7 @@ Treatment 3 & 0.0009271 & 0.296 \\
 
 \end{block}
 
-%----------------------------------------------------------------------------------------
-%	CONTACT INFORMATION
-%----------------------------------------------------------------------------------------
-
-% \setbeamercolor{block title}{fg=black,bg=orange!70} % Change the block title color
-
-\begin{block}{Contact Information}
-
-\begin{itemize}
-\item Web: \href{http://jsta.rbind.io}{http://jsta.rbind.io}
-\item Email: \href{mailto:stachel2@msu.edu}{stachel2@msu.edu}
-\end{itemize}
-
-\end{block}
-
-%----------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
 
 \end{column} % End of the second column
 
