@@ -85,17 +85,13 @@
 \vspace{1em}
 \item P retention is typically modelled as a function of a given lake's volume-weighted hydrologic flux (or its inverse, \alert{residence time}).
 \end{itemize}
-\vspace{2em}
-\begin{figure}
-\includegraphics[width=\linewidth]{milstead_single.pdf}
-\end{figure}
-
-\begin{itemize}
-\item Given evidence that P retention in streams is affected by network connectivity:
-\end{itemize}
-
 \end{block}
 
+\begin{beamercolorbox}[wd=\textwidth,rounded=true]{block body}
+   \begin{figure}
+      \includegraphics[width=\linewidth]{milstead_single.pdf}
+   \end{figure}
+\end{beamercolorbox}
 
 %------------------------------------------------------------------------------
 %	Research Questions
@@ -104,6 +100,10 @@
 \setbeamercolor{block title}{fg=black,bg=orange!70} % Change the block title color
 \setbeamercolor{block body}{bg=white}
 \begin{block}{Research Questions}
+
+\large Given evidence that P retention in streams is affected by network connectivity:
+
+\vspace{1.5em}
 
 \begin{enumerate} \large 
 \item \textbf{Do more well-connected lakes retain less P than lower connectivity lakes (given equal residence times)?}
@@ -134,16 +134,6 @@
 
 \begin{itemize}
 \item Data on P loading, P export, and residence time from approximately 250 lakes included in the National Eutrophication Survey (1972 - 1975)\cite{StachelekNationalEutrophicationSurvey2017}.
-\vspace{1em}
-\item Calculated network properties of each lake catchment such as stream density, upstream lake area, average link length, and stream order ratio.
-\vspace{1em}
-\item Fit linear models relating P retention to lake catchment network properties as well as other potential explanatory factors such as landuse and climate.
-
-\begin{equation*}
-\begin{split}
-P\, Retention \sim Network\, Properties\, + \\ Landuse + Climate
-\end{split}
-\end{equation*}
 
 % \item Lakes were sampled on a monthly basis for a one year period in one of 1972, 1973, 1974, or 1975.
 % \item P loads were estimated as the sum of the loads contributed by incoming tributaries.
@@ -164,34 +154,16 @@ P\, Retention \sim Network\, Properties\, + \\ Landuse + Climate
 %------------------------------------------------------------------------------
 %	RESULTS
 %------------------------------------------------------------------------------
-{
-\setbeamercolor{block title}{fg=black,bg=orange!70} % Change the block title color
-\setbeamercolor{block body}{bg=white}
-\begin{block}{Results: Table}
+\begin{block}{Results}
+\begin{figure}
+  \includegraphics[width=25cm, height=20cm]{p_retention_boxplot.pdf}
+\end{figure}
 
-\begin{itemize}
-\item Ased Aliquet Luctus Lectus
-\end{itemize}
-
-\begin{table}
-\begin{tabular}{l l}
-\toprule
-\textbf{Treatments} & \textbf{Response 1} \\
-\midrule
-Response Variable: & P retention \\
-Predictor Variables: & P Loading Concentration \\
- & Lake P Concentration \\
- & Residence Time \\
-Grouping Variables: & Connectivity Index \\
- & Climate Region \\
- & Land-use Cover \\
-\bottomrule
-\end{tabular}
-% \caption{Table caption}
-\end{table}
+\begin{figure}
+  \includegraphics[width=30cm, height=20cm]{nls_coefs.pdf}
+\end{figure}
 
 \end{block}
-}
 
 %------------------------------------------------
 
@@ -200,13 +172,33 @@ Grouping Variables: & Connectivity Index \\
 %	FUTURE WORK
 %------------------------------------------------------------------------------
 
+
+{
+\setbeamercolor{block title}{fg=black,bg=orange!70} % Change the block title color
+\setbeamercolor{block body}{bg=white}
 \begin{block}{Future Work}
 
+
+
 \begin{itemize}
-\item Opet \alert{volutpat} ligula. Duis semper lorem eget dui dignissim porttitor. Nulla facilisi. In ullamcorper lorem quis dolor iaculis nec egestas enim ultricies. Cras ut mauris elit, ut lacinia dui. Proin in ante et libero hendrerit iaculis.
+\item Calculate network properties of each lake catchment such as stream density, upstream lake area, average link length, and stream order ratio.
+\vspace{1em}
+\item Model $k$ and $x$ seperately via 2-component hierarchical models that relate P retention to \textbf{lake catchment network properties} as well as other potential explanatory factors such as landuse and climate.
+
+\begin{equation*}
+P\, Retention \sim k, x
+\end{equation*}
+
+\begin{equation*}
+\begin{split}
+k \sim Network\, Properties\, + \\ Landuse + Climate
+\end{split}
+\end{equation*}
+
 \end{itemize}
 
 \end{block}
+}
 
 %------------------------------------------------------------------------------
 %	REFERENCES
