@@ -84,39 +84,46 @@
 \item P retention is a desirable metric for assessing eutrophication risk because it is a unitless measure that can be easily compared among different lake types irrespective of their baseline P concentrations or total P inputs.
 \vspace{1em}
 \item P retention is typically modelled as a function of a given lake's volume-weighted hydrologic flux (or its inverse, \alert{residence time}).
+\vspace{0.5em}
+\item There is some evidence that P retention in lakes and streams is affected by network connectivity. 
 \end{itemize}
 \end{block}
 
+{
+\setbeamercolor{block title}{fg=black,bg=orange!70} % Change the block title color
+\setbeamercolor{block body}{bg=white}
 \begin{beamercolorbox}[wd=\textwidth,rounded=true]{block body}
    \begin{figure}
-      \includegraphics[width=\linewidth]{milstead_single.pdf}
+      \includegraphics[width=\linewidth]{milstead_multi.pdf}
    \end{figure}
 \end{beamercolorbox}
+}
 
 %------------------------------------------------------------------------------
 %	Research Questions
 %------------------------------------------------------------------------------
-{
-\setbeamercolor{block title}{fg=black,bg=orange!70} % Change the block title color
-\setbeamercolor{block body}{bg=white}
+\vspace{1em}
 \begin{block}{Research Questions}
 
-\large Given evidence that P retention in streams is affected by network connectivity:
-
-\vspace{1.5em}
+\vspace{1em}
 
 \begin{enumerate} \large 
 \item \textbf{Do more well-connected lakes retain less P than lower connectivity lakes (given equal residence times)?}
+\vspace{1em}
 \item \textbf{Is the effect of connectivity on P retention more prominent in lakes with intermediate residence times?}
 \end{enumerate}
+\end{block}
 
-\vspace{2em}
+{
+\setbeamercolor{block title}{fg=black,bg=orange!70} % Change the block title color
+\setbeamercolor{block body}{bg=white}
+\begin{beamercolorbox}[wd=\textwidth,rounded=true]{block body}
 
 \begin{figure}
-  \includegraphics[width=\linewidth]{conny_framework.png}
+  \includegraphics[width=\linewidth]{conny_framework.pdf}
 \end{figure}
 
-\end{block}
+\end{beamercolorbox}
 }
 
 %------------------------------------------------------------------------------
@@ -134,6 +141,8 @@
 
 \begin{itemize}
 \item Data on P loading, P export, and residence time from approximately 250 lakes included in the National Eutrophication Survey (1972 - 1975)\cite{StachelekNationalEutrophicationSurvey2017}.
+\vspace{1em}
+\item Model P retention as a function of residence time using 2 parameter ($k$, $x$) Vollenweider models \cite{Brettreviewreassessmentlake2007}.
 
 % \item Lakes were sampled on a monthly basis for a one year period in one of 1972, 1973, 1974, or 1975.
 % \item P loads were estimated as the sum of the loads contributed by incoming tributaries.
@@ -156,7 +165,7 @@
 %------------------------------------------------------------------------------
 \begin{block}{Results}
 \begin{figure}
-  \includegraphics[width=25cm, height=20cm]{p_retention_boxplot.pdf}
+  \includegraphics[width=30cm, height=20cm]{p_retention_boxplot.pdf}
 \end{figure}
 
 \begin{figure}
@@ -172,18 +181,19 @@
 %	FUTURE WORK
 %------------------------------------------------------------------------------
 
-
-{
-\setbeamercolor{block title}{fg=black,bg=orange!70} % Change the block title color
-\setbeamercolor{block body}{bg=white}
 \begin{block}{Future Work}
-
-
 
 \begin{itemize}
 \item Calculate network properties of each lake catchment such as stream density, upstream lake area, average link length, and stream order ratio.
 \vspace{1em}
 \item Model $k$ and $x$ seperately via 2-component hierarchical models that relate P retention to \textbf{lake catchment network properties} as well as other potential explanatory factors such as landuse and climate.
+\end{itemize}
+\end{block}
+
+{
+\setbeamercolor{block title}{fg=black,bg=orange!70} % Change the block title color
+\setbeamercolor{block body}{bg=white}
+\begin{beamercolorbox}[wd=\textwidth,rounded=true]{block body}
 
 \begin{equation*}
 P\, Retention \sim k, x
@@ -195,10 +205,9 @@ k \sim Network\, Properties\, + \\ Landuse + Climate
 \end{split}
 \end{equation*}
 
-\end{itemize}
-
-\end{block}
+\end{beamercolorbox}
 }
+
 
 %------------------------------------------------------------------------------
 %	REFERENCES
@@ -207,7 +216,7 @@ k \sim Network\, Properties\, + \\ Landuse + Climate
 \begin{block}{References}
         
 \nocite{*} % Insert publications even if they are not cited in the poster
-\small{\bibliographystyle{unsrt}
+\small{\bibliographystyle{unsrt_jsta}
 \bibliography{sample}}
 
 \end{block}
