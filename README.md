@@ -4,7 +4,7 @@
 
 GLEON 2017
 
-## Build Presentation
+## Presentation
 
 See [2017_GLEON.pdf](2017_GLEON.pdf)
 
