@@ -26,7 +26,7 @@
 \usetheme{I6pd2} % Use the I6pd2 theme supplied with this template
 
 \usepackage[english]{babel} % English language/hyphenation
-
+\usepackage{graphicx}
 \usepackage{amsmath,amsthm,amssymb,latexsym} % For including math equations, theorems, symbols, etc
 
 %\usepackage{times}\usefonttheme{professionalfonts}  % Uncomment to use Times as the main font
@@ -109,8 +109,6 @@
 
 \begin{enumerate} \large 
 \item \textbf{Do more well-connected lakes retain less P than lower connectivity lakes (given equal residence times)?}
-\vspace{1em}
-\item \textbf{Is the effect of connectivity on P retention more prominent in lakes with intermediate residence times?}
 \end{enumerate}
 \end{block}
 
@@ -142,7 +140,9 @@
 \begin{itemize}
 \item Data on P loading, P export, and residence time from approximately 250 lakes included in the National Eutrophication Survey (1972 - 1975)\cite{StachelekNationalEutrophicationSurvey2017}.
 \vspace{1em}
-\item Model P retention as a function of residence time using 2 parameter ($k$, $x$) Vollenweider models \cite{Brettreviewreassessmentlake2007}.
+\item Model P retention as a function of residence time using 2 parameter ($k$, $x$) Vollenweider models \cite{Brettreviewreassessmentlake2007}. 
+\vspace{1em}
+\item $k$ and $x$ can be interpreted as representing biological and hydrological controls on P retention respectively.
 
 % \item Lakes were sampled on a monthly basis for a one year period in one of 1972, 1973, 1974, or 1975.
 % \item P loads were estimated as the sum of the loads contributed by incoming tributaries.
@@ -160,22 +160,53 @@
 
 \end{block}
 
+{
+\setbeamercolor{block title}{fg=black,bg=orange!70} % Change the block title color
+\setbeamercolor{block body}{bg=white}
+\begin{beamercolorbox}[wd=\textwidth,rounded=true]{block body}
+
+\begin{equation*}
+P\, Retention \sim k, x
+\end{equation*}
+
+\begin{equation*}
+\begin{split}
+k \sim Connectivity\, Type
+\end{split}
+\end{equation*}
+
+\end{beamercolorbox}
+}
+
+\vspace{1em}
+
 %------------------------------------------------------------------------------
 %	RESULTS
 %------------------------------------------------------------------------------
 \begin{block}{Results}
-\begin{figure}
-  \includegraphics[width=30cm, height=20cm]{p_retention_boxplot.pdf}
-\end{figure}
-
-\begin{figure}
-  \includegraphics[width=30cm, height=20cm]{nls_coefs.pdf}
-\end{figure}
-
+\begin{itemize}
+\item Estimates of $k$ were higher in lakes without upstream lakes, despite have a similar distributions of residence time and P retention relative to those with upstream lakes.
+\vspace{1em}
+\item This suggests that P inputs are controlled by biological processes to a greater extent in lakes without upstream lakes.
+\end{itemize}
 \end{block}
+
+{
+\setbeamercolor{block title}{fg=black,bg=orange!70} % Change the block title color
+\setbeamercolor{block body}{bg=white}
+\begin{beamercolorbox}[wd=\textwidth,rounded=true]{block body}
+
+\begin{figure}
+  \includegraphics[width=30cm]{gleon_poster.pdf}
+\end{figure}
+
+\end{beamercolorbox}
+}
+
 
 %------------------------------------------------
 
+\vspace{1em}
 
 %------------------------------------------------------------------------------
 %	FUTURE WORK
@@ -189,24 +220,6 @@
 \item Model $k$ and $x$ seperately via 2-component hierarchical models that relate P retention to \textbf{lake catchment network properties} as well as other potential explanatory factors such as landuse and climate.
 \end{itemize}
 \end{block}
-
-{
-\setbeamercolor{block title}{fg=black,bg=orange!70} % Change the block title color
-\setbeamercolor{block body}{bg=white}
-\begin{beamercolorbox}[wd=\textwidth,rounded=true]{block body}
-
-\begin{equation*}
-P\, Retention \sim k, x
-\end{equation*}
-
-\begin{equation*}
-\begin{split}
-k \sim Network\, Properties\, + \\ Landuse + Climate
-\end{split}
-\end{equation*}
-
-\end{beamercolorbox}
-}
 
 
 %------------------------------------------------------------------------------
