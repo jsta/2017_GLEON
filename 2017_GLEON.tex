@@ -21,6 +21,15 @@
 
 \documentclass[final,hyperref={pdfpagelabels=false}]{beamer}
 
+\usepackage{soul}
+
+\usepackage[firstinits=true,backend=bibtex,doi=false,isbn=false,url=false,maxnames=1]{biblatex}
+\AtEveryBibitem{%
+  \clearfield{pages}%
+}
+\renewcommand{\bibfont}{\normalfont\footnotesize}
+\addbibresource{bib.bib}
+
 \usepackage[orientation=portrait,size=a0,scale=1.4]{beamerposter} % Use the beamerposter package for laying out the poster with a portrait orientation and an a0 paper size
 
 \usetheme{I6pd2} % Use the I6pd2 theme supplied with this template
@@ -44,9 +53,9 @@
 %	TITLE SECTION 
 %------------------------------------------------------------------------------
 
-\title{\huge The Effect of Lake Connectivity on Phosphorus Retention in Lakes} % Poster title
+\title{\LARGE Does Connectivity Control Lake Phosphorus Retention?} % Poster title
 
-\author{Joseph Stachelek} % Author(s)
+\author{Joseph Stachelek, Pat Soranno} % Author(s)
 
 \institute{Department of Fisheries and Wildlife, Michigan State University, MI, USA} % Institution(s)
 
@@ -59,7 +68,8 @@
 \newcommand{\rightfoot}{stachel2@msu.edu} % Right footer text
 
 %------------------------------------------------------------------------------
-
+\usepackage{pgfplots}
+\input{../../../../tex/beamer-lake-fig/beamer-lake-fig.tex}
 \begin{document}
 
 \addtobeamertemplate{block end}{}{\vspace*{2ex}} % White space under blocks
@@ -79,16 +89,16 @@
 \begin{block}{Introduction}
 
 \begin{itemize}
-\item A comprehensive understanding of phosphorus (P) cycling is neccessary to predict P concentrations among many different lakes types and to better manage the risk of eutrophication from excess nutrient loading.
-\vspace{1em}
-\item P retention is a desirable metric for assessing eutrophication risk because it is a unitless measure that can be easily compared among different lake types irrespective of their baseline P concentrations or total P inputs.
-\vspace{1em}
-\item P retention is typically modelled as a function of a given lake's volume-weighted hydrologic flux (or its inverse, \alert{residence time}).
-\vspace{-0.5em}
-\item There is some evidence that P retention in lakes and streams is affected by network connectivity. 
+% \item A comprehensive understanding of phosphorus (P) cycling is neccessary to predict P concentrations among many different lakes types and to better manage the risk of eutrophication from excess nutrient loading.
+% \vspace{1em}
+% \item P retention is a desirable metric for assessing eutrophication risk because it is a unitless measure that can be easily compared among different lake types irrespective of their baseline P concentrations or total P inputs.
+% \vspace{1em}
+% \item P retention is typically modelled as a function of a given lake's volume-weighted hydrologic flux (or its inverse, \alert{residence time}).
+% \vspace{-0.5em}
+\item There is some evidence that P retention in lakes and streams is affected by network connectivity:
 \end{itemize}
-\end{block}
 
+\vspace{0.5em}
 {
 \setbeamercolor{block title}{fg=black,bg=orange!70} % Change the block title color
 \setbeamercolor{block body}{bg=white}
@@ -99,6 +109,30 @@
 \end{beamercolorbox}
 }
 
+\vspace{1.4em}
+
+\begin{columns}
+
+\begin{column}{0.5\textwidth}
+\centering
+\large stream \\
+\vspace{0.5em}
+\primaryprofileflatequal[1.5]{white} \\
+\textbf{Less Connected}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\centering
+\large lakestream \\
+\vspace{0.5em}
+\secondaryprofileflatequal[1.5]{white} \\
+\textbf{More Connected}
+\end{column}
+\end{columns}
+\vspace{0.3em}
+
+\vspace{0.5em}
+\end{block}
 %------------------------------------------------------------------------------
 %	Research Questions
 %------------------------------------------------------------------------------
@@ -106,12 +140,12 @@
 \begin{block}{Research Questions}
 
 \begin{enumerate} \large 
-\item \textbf{Do more well-connected lakes retain less P than lower connectivity lakes (given equal residence times)?}
+\item \textbf{Do connected lakes retain less P than less connected lakes (given equal residence times)?}
 \vspace{1em}
 \item \textbf{Are there differences in the relative influence of biological and hydrological control on P retention in lakes of differing connectivity?}
 \end{enumerate}
-\end{block}
 
+\vspace{0.5em}
 {
 \setbeamercolor{block title}{fg=black,bg=orange!70} % Change the block title color
 \setbeamercolor{block body}{bg=white}
@@ -123,6 +157,8 @@
 
 \end{beamercolorbox}
 }
+\vspace{0.5em}
+\end{block}
 
 %------------------------------------------------------------------------------
 
@@ -142,7 +178,7 @@
 \vspace{1em}
 \item Model P retention as a function of residence time using 2 parameter ($k$, $x$) Vollenweider models \cite{Brettreviewreassessmentlake2007}. 
 \vspace{1em}
-\item $k$ and $x$ can be interpreted as representing biological and hydrological controls on P retention respectively.
+\item $k$ (removal rate coefficient) and $x$ can be interpreted as representing biological and hydrological controls on P retention respectively.
 
 % \item Lakes were sampled on a monthly basis for a one year period in one of 1972, 1973, 1974, or 1975.
 % \item P loads were estimated as the sum of the loads contributed by incoming tributaries.
@@ -184,13 +220,15 @@
 %	RESULTS
 %------------------------------------------------------------------------------
 \begin{block}{Results}
-\begin{itemize}
-\item \textbf{Estimates of $k$ were higher in lakes without upstream lakes, despite have a similar distributions of residence time and P retention relative to those with upstream lakes.}
+\begin{enumerate}
+\item \textbf{No, lakes with and without upstream lakes had similar distributions of residence time and P retention.}
 \vspace{1em}
-\item \textbf{This suggests that P inputs are controlled by biological processes to a greater extent in lakes without upstream lakes.}
-\end{itemize}
-\end{block}
+\item \textbf{Yes, estimates of $k$ were higher in (less connected) lakes without upstream lakes.}
+\end{enumerate}
+\vspace{1em}
+\large \textbf{\ul{This suggests that P inputs are controlled by biological processes to a greater extent in lakes without upstream lakes.}}
 
+\vspace{0.5em}
 {
 \setbeamercolor{block title}{fg=black,bg=orange!70} % Change the block title color
 \setbeamercolor{block body}{bg=white}
@@ -202,16 +240,16 @@
 
 \end{beamercolorbox}
 }
-
+\vspace{0.5em}
+\end{block}
 
 %------------------------------------------------
 
-\vspace{1em}
+\vspace{0.8em}
 
 %------------------------------------------------------------------------------
 %	FUTURE WORK
 %------------------------------------------------------------------------------
-
 \begin{block}{Future Work}
 
 \begin{itemize}
@@ -226,11 +264,20 @@
 %	REFERENCES
 %------------------------------------------------------------------------------
 
-\begin{block}{References}
+\begin{block}{References and Acknowledgments}
         
-\nocite{*} % Insert publications even if they are not cited in the poster
-\small{\bibliographystyle{unsrt}
-\bibliography{bib}}
+\nocite{*}
+\begingroup
+\setlength\bibitemsep{0pt}
+\setlength\bibnamesep{0pt}
+\printbibliography[heading=none]
+\endgroup
+
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{cc}
+
+\raisebox{-0.5\height}{\includegraphics[width=5cm]{nsf2.pdf}} & \raisebox{-\height}{\small Viginia Tech - NSF \#1517823} 
+\end{tabular}
 
 \end{block}
 
