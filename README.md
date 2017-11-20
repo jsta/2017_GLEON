@@ -10,6 +10,12 @@
 
 * Please have your poster printed/ready before you travel, and bring it with you to GLEON 19. Tacks, pins or tapes will be provided on site to hang your poster.
 
+## Building and Editing
+
+* Edit 2017_GLEON.tex
+
+* Build with `xelatex`
+
 ## Presentation
 
 See [2017_GLEON.pdf](2017_GLEON.pdf)
