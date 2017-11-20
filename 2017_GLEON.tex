@@ -68,6 +68,8 @@
 \newcommand{\rightfoot}{stachel2@msu.edu} % Right footer text
 
 %------------------------------------------------------------------------------
+\usepackage{xcolor}
+
 \usepackage{pgfplots}
 \input{../../../../tex/beamer-lake-fig/beamer-lake-fig.tex}
 \begin{document}
@@ -106,18 +108,21 @@
    \begin{figure}
       \includegraphics[width=\linewidth]{milstead_multi.pdf}
    \end{figure}
-\end{beamercolorbox}
-}
 
 \vspace{1.4em}
 
 \begin{columns}
 
+% "#00BA38" "#619CFF"
+% \definecolor{lakestream}{"ForestGreen"}
+% \definecolor{lakestream}{HTML}{00BA38}
+\definecolor{stream}{HTML}{619CFF}
+
 \begin{column}{0.5\textwidth}
 \centering
 \large stream \\
 \vspace{0.5em}
-\primaryprofileflatequal[1.5]{white} \\
+\primaryprofileflatequal[1.5]{stream!80} \\
 \textbf{Less Connected}
 \end{column}
 
@@ -125,11 +130,14 @@
 \centering
 \large lakestream \\
 \vspace{0.5em}
-\secondaryprofileflatequal[1.5]{white} \\
+\secondaryprofileflatequal[1.5]{green!100!black!80} \\
 \textbf{More Connected}
 \end{column}
 \end{columns}
 \vspace{0.3em}
+\end{beamercolorbox}
+}
+
 
 \vspace{0.5em}
 \end{block}
