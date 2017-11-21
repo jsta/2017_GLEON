@@ -77,6 +77,7 @@
 \addtobeamertemplate{block end}{}{\vspace*{2ex}} % White space under blocks
 
 \begin{frame}[t] % The whole poster is enclosed in one beamer frame
+\vspace{1em}
 \begin{columns}[t] % The whole poster consists of two major columns, each of which can be subdivided further with another \begin{columns} block - the [t] argument aligns each column's content to the top
 
 \begin{column}{.02\textwidth}\end{column} % Empty spacer column
@@ -112,6 +113,9 @@
    \end{figure}
 
 \vspace{1.4em}
+
+\centering
+\textbf{Lake Connectivity Types}
 
 \begin{columns}
 
@@ -149,7 +153,7 @@
 }
 
 
-\vspace{0.5em}
+\vspace{1.4em}
 \end{block}
 %------------------------------------------------------------------------------
 %	Research Questions
@@ -313,12 +317,6 @@
 \endgroup
 \end{block}
 
-\begin{tabular}{ll}
-\includegraphics[width=5cm]{nsf2.pdf} & \small Funding provided by NSF \#1517823. CNH-L: Linking Land-Use Decision Making, \\
- & \small Water Quality, and Lake Associations to Understand Human-Natural Feedbacks \\
- & in Lake Catchments.
-\end{tabular}
-
 %------------------------------------------------------------------------------
 
 \end{column} % End of the second column
@@ -326,6 +324,25 @@
 \begin{column}{.015\textwidth}\end{column} % Empty spacer column
 
 \end{columns} % End of all the columns in the poster
+
+\begin{columns}
+\begin{column}{.015\textwidth}\end{column} % Empty spacer column
+
+\begin{column}{.25\textwidth}
+\begin{flushright}
+\includegraphics[width=5cm]{nsf2.pdf} 
+\end{flushright}
+\end{column}
+
+\begin{column}{.45\textwidth}
+\small Funding provided by NSF \#1517823. CNH-L: Linking Land-Use Decision Making, \\
+ \small Water Quality, and Lake Associations to Understand Human-Natural Feedbacks \\
+ in Lake Catchments.
+\end{column}
+
+\begin{column}{.1\textwidth}\end{column} % Empty spacer column
+\end{columns}
+
 
 \end{frame} % End of the enclosing frame
 
