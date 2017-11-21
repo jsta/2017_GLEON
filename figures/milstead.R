@@ -5,12 +5,12 @@ test3 <- readRDS("/home/jose/Documents/Science/Dissertation/Analysis/misc/milste
 
 test3$lakeconnectivity <- 
   fct_recode(test3$lakeconnectivity, 
-             "lakestream" = "Secondary",
-             "stream" = "Primary",
-             "headwater" = "Headwater")
+             "Lakestream" = "Secondary",
+             "Stream" = "Primary",
+             "Headwater" = "Headwater")
 
 test3$lakeconnectivity <- factor(test3$lakeconnectivity, 
-                  levels = c("Isolated", "headwater", "stream", "lakestream"))
+                  levels = c("Isolated", "Headwater", "Stream", "Lakestream"))
 
 test3 <- test3[test3$hrt > 0,] 
 test3 <- test3[test3$AreaSqKm > 0.04,] # rm less than 4 ha
@@ -36,7 +36,7 @@ month_labels  <- round(as.numeric(
 
 mixed_labels <- paste0(
       c(minute_labels[1:2], day_labels[3], month_labels[4:5], yr_labels[6:7]), 
-      c(" min", " min", " days", " ", " months", " years", " years"))
+      c(" min", " min", " days", " ", " mon.", " years", " years"))
 
 quants <- exp(quantile(log(test3[!is.na(test3$lakeconnectivity), "hrt"])))
 
@@ -70,13 +70,14 @@ test4 <- droplevels(test3[test3$lakeconnectivity != "Isolated",])
               data = test4) +
   scale_color_brewer(palette = "Set1") +
   cowplot::theme_cowplot() + 
-  theme(legend.title = element_blank(), legend.position = c(0.13, 0.8),
+  theme(legend.title = element_blank(), legend.position = c(0.18, 0.8),
         legend.text = element_text(), plot.caption = element_text(size = 10, hjust = 0)) +
   xlab("Residence Time") +
-  ylab("P Retention (%)") + 
-  geom_segment(data = data.frame(x = quants[c(2, 4)], y = c(0.8, 0.8)), 
-               aes(x = x, y = c(0, 0), xend = x, yend = y), 
-               color = "gray42", size = 1.5, linetype = 2) + 
-  labs(caption = "Re-analysis of data from [3] with data from [4]"))
+  ylab("P Retention (%)")) 
+  # geom_segment(data = data.frame(x = quants[c(2, 4)], y = c(0.8, 0.8)), 
+  #              aes(x = x, y = c(0, 0), xend = x, yend = y), 
+  #              color = "gray42", size = 1.5, linetype = 2)) 
+  # labs(caption = "Re-analysis of data from [3] with data from [4]"))  
+  # ggtitle("Lake P Retention as a function of \n residence time and lake connectivity"))
 
-ggsave("figures/milstead_multi.pdf", gg_fit_multi, height = 4.4)
+ggsave("figures/milstead_multi.pdf", gg_fit_multi, height = 3)

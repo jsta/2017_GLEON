@@ -55,7 +55,7 @@
 
 \title{\LARGE Does Connectivity Control Lake Phosphorus Retention?} % Poster title
 
-\author{Joseph Stachelek, Pat Soranno} % Author(s)
+\author{Joseph Stachelek, Patricia A. Soranno} % Author(s)
 
 \institute{Department of Fisheries and Wildlife, Michigan State University, MI, USA} % Institution(s)
 
@@ -77,7 +77,6 @@
 \addtobeamertemplate{block end}{}{\vspace*{2ex}} % White space under blocks
 
 \begin{frame}[t] % The whole poster is enclosed in one beamer frame
-\vspace{1em}
 \begin{columns}[t] % The whole poster consists of two major columns, each of which can be subdivided further with another \begin{columns} block - the [t] argument aligns each column's content to the top
 
 \begin{column}{.02\textwidth}\end{column} % Empty spacer column
@@ -97,7 +96,9 @@
 % \vspace{1em}
 % \item P retention is typically modelled as a function of a given lake's volume-weighted hydrologic flux (or its inverse, \alert{residence time}).
 % \vspace{-0.5em}
-\item There is some evidence that P retention in lakes and streams is affected by network connectivity:
+\item Water residence time is viewed as a major factor controlling lake P retention.
+\vspace{0.5em}
+\item However, there is large variation in that relationship with some evidence that this variation may be partly explained by lake connectivity. 
 \end{itemize}
 
 \vspace{1em}
@@ -107,6 +108,7 @@
 \begin{beamercolorbox}[wd=\textwidth,rounded=true]{block body}
    \begin{figure}
       \includegraphics[width=\linewidth]{milstead_multi.pdf}
+      \caption{Lake P Retention as a function of residence time and lake connectivity. Re-analysis of data from [2] with data from [3].}
    \end{figure}
 
 \vspace{1.4em}
@@ -118,19 +120,27 @@
 % \definecolor{lakestream}{HTML}{00BA38}
 \definecolor{stream}{HTML}{619CFF}
 
-\begin{column}{0.5\textwidth}
+\begin{column}{0.3\textwidth}
 \centering
-\large stream \\
+\large Headwater \\
 \vspace{0.5em}
-\primaryprofileflatequal[1.5]{stream!80} \\
+\headwaterprofileflatequal[1.1]{red!80} \\
 \textbf{Less Connected}
 \end{column}
 
-\begin{column}{0.5\textwidth}
+\begin{column}{0.3\textwidth}
 \centering
-\large lakestream \\
+\large Stream \\
 \vspace{0.5em}
-\secondaryprofileflatequal[1.5]{green!100!black!80} \\
+\primaryprofileflatequal[1.1]{stream!80} \\
+\textbf{ }
+\end{column}
+
+\begin{column}{0.3\textwidth}
+\centering
+\large Lakestream \\
+\vspace{0.5em}
+\secondaryprofileflatequal[1.1]{green!100!black!80} \\
 \textbf{More Connected}
 \end{column}
 \end{columns}
@@ -144,13 +154,13 @@
 %------------------------------------------------------------------------------
 %	Research Questions
 %------------------------------------------------------------------------------
-\vspace{1em}
+\vspace{0.5em}
 \begin{block}{Research Questions}
 
 \begin{enumerate} \large 
 \item \textbf{Do connected lakes retain less P than less connected lakes (given equal residence times)?}
 \vspace{1em}
-\item \textbf{Are there differences in the relative influence of biological and hydrological control on P retention in lakes of differing connectivity?}
+\item \textbf{Does lake connectivity influence the relative control of internal and hydrological processes on P retention?}
 \end{enumerate}
 
 \vspace{1em}
@@ -161,7 +171,9 @@
 
 \begin{figure}
   \includegraphics[width=\linewidth]{conny_framework.pdf}
+  \caption{Expected relationship between lake connectivity, residence time, and P retention.}
 \end{figure}
+
 
 \end{beamercolorbox}
 }
@@ -172,14 +184,6 @@
 
 \vspace{1em}
 
-\begin{block}{Methods}
-
-\begin{itemize}
-\item Data on P loading, P export, and residence time from approximately 250 lakes included in the National Eutrophication Survey (1972 - 1975)\cite{StachelekNationalEutrophicationSurvey2017}.
-\end{itemize}
-
-\end{block}
-
 \end{column} % End of the first column
 
 \begin{column}{.03\textwidth}\end{column} % Empty spacer column
@@ -189,12 +193,14 @@
 %------------------------------------------------------------------------------
 %	METHODS
 %------------------------------------------------------------------------------
-\begin{block}{Methods Con't}
+\begin{block}{Methods}
 
 \begin{itemize}
+\item Data on P loading, P export, and residence time from approximately 250 lakes included in the National Eutrophication Survey (1972 - 1975)\cite{StachelekNationalEutrophicationSurvey2017}.
+\vspace{1em}
 \item Model P retention as a function of residence time using 2 parameter ($k$, $x$) Vollenweider models \cite{Brettreviewreassessmentlake2007}. 
 \vspace{1em}
-\item $k$ (removal rate coefficient) and $x$ (hydrologic flux coefficient) can be interpreted as representing biological and hydrological controls on P retention respectively.
+\item $k$ (removal rate coefficient) and $x$ (hydrologic flux coefficient) can be interpreted as representing interal and hydrological controls on P retention respectively.
 
 % \item Lakes were sampled on a monthly basis for a one year period in one of 1972, 1973, 1974, or 1975.
 % \item P loads were estimated as the sum of the loads contributed by incoming tributaries.
@@ -230,38 +236,54 @@
 % \end{beamercolorbox}
 % }
 
-\vspace{1em}
+\vspace{0.5em}
 
 %------------------------------------------------------------------------------
 %	RESULTS
 %------------------------------------------------------------------------------
 \begin{block}{Results}
 \begin{enumerate}
-\item \textbf{No, lakes with and without upstream lakes had similar distributions of residence time and P retention.}
-\vspace{1em}
-\item \textbf{Yes, estimates of the removal rate coefficient ($k$) were higher in (less connected) lakes without upstream lakes.}
-\end{enumerate}
-\vspace{1em}
-\large \textbf{\ul{This suggests that P inputs are controlled by biological processes to a greater extent in lakes without upstream lakes.}}
+\item \textbf{No: Lakes with and without upstream lakes had similar distributions of residence time and P retention.}
 
-\vspace{1em}
+\vspace{0.5em}
+
 {
 \setbeamercolor{block title}{fg=black,bg=orange!70} % Change the block title color
 \setbeamercolor{block body}{bg=white}
 \begin{beamercolorbox}[wd=\textwidth,rounded=true]{block body}
 
 \begin{figure}
-  \includegraphics[width=30cm]{gleon_poster.pdf}
+  \includegraphics[width=30cm]{gleon_poster_1.pdf}
 \end{figure}
 
 \end{beamercolorbox}
 }
+
+\vspace{0.5em}
+
+\item \textbf{Yes: The relative control of internal processes over P retention appears to be greater in less connected lakes (without upstream lakes) because \ul{estimates of the removal rate coefficient ($k$) were higher.}}
+\end{enumerate}
+
+\vspace{0.5em}
+
+{
+\setbeamercolor{block title}{fg=black,bg=orange!70} % Change the block title color
+\setbeamercolor{block body}{bg=white}
+\begin{beamercolorbox}[wd=\textwidth,rounded=true]{block body}
+
+\begin{figure}
+  \includegraphics[width=30cm]{gleon_poster_2.pdf}
+\end{figure}
+
+\end{beamercolorbox}
+}
+
 \vspace{0.5em}
 \end{block}
 
 %------------------------------------------------
 
-\vspace{0.8em}
+\vspace{0.5em}
 
 %------------------------------------------------------------------------------
 %	FUTURE WORK
@@ -269,9 +291,9 @@
 \begin{block}{Future Work}
 
 \begin{itemize}
-\item Calculate network properties of each lake catchment such as stream density, upstream lake area, average link length, and stream order ratio.
+\item Calculate additional lake connectivity measures such as stream density, upstream lake area, average link length, and stream order ratio.
 \vspace{1em}
-\item Model $k$ and $x$ seperately via 2-component hierarchical models that relate P retention to \textbf{lake catchment network properties} as well as other potential explanatory factors such as landuse and climate.
+\item Model $k$ and $x$ seperately via 2-component hierarchical models that relate P retention to \textbf{lake connectivity properties} as well as other potential explanatory factors such as landuse and climate.
 \end{itemize}
 \end{block}
 
@@ -279,7 +301,7 @@
 %------------------------------------------------------------------------------
 %	REFERENCES
 %------------------------------------------------------------------------------
-\vspace{1em}
+\vspace{0.5em}
 
 \begin{block}{References}
 
@@ -291,9 +313,10 @@
 \endgroup
 \end{block}
 
-\begin{tabular}{cc}
-
-\raisebox{-0.5\height}{\includegraphics[width=5cm]{nsf2.pdf}} & \raisebox{-\height}{\small Viginia Tech - NSF \#1517823}
+\begin{tabular}{ll}
+\includegraphics[width=5cm]{nsf2.pdf} & \small Funding provided by NSF \#1517823. CNH-L: Linking Land-Use Decision Making, \\
+ & \small Water Quality, and Lake Associations to Understand Human-Natural Feedbacks \\
+ & in Lake Catchments.
 \end{tabular}
 
 %------------------------------------------------------------------------------
