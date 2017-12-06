@@ -1,4 +1,4 @@
-# The Effect of Lake Connectivity on Phosphorus Retention in Lakes
+# Does Connectivity Control Lake Phosphorus Retention?
 
 ## Instructions
 
